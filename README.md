@@ -1,9 +1,8 @@
-# JxJ : Joomla! "multiplies" Joomla!
+# JxC : Joomla! "multiplies" other CMS
 
-## System - JxJ : plg_system_jxj
+## System - JxC : plg_system_jxc
 
-> TLDR; JXJ is system plugin to make 2 Joomla! websites communicate via webservices.
-Whether it is:
+> TLDR; JXC is system plugin to make Joomla! website synchronise with other CMS (Drupal, TYPO3, WordPress) via Web Services.
 
 ![visitor badge](https://visitor-badge.laobi.icu/badge?page_id=alexandreelise.plg_system_jxj&style=flat&format=true)
 ![GitHub followers](https://img.shields.io/github/followers/alexandreelise?style=flat)
@@ -24,36 +23,40 @@ Whether it is:
 
 > ![GitHub Repo stars](https://img.shields.io/github/stars/alexandreelise/plg_system_jxj?style=flat) ![GitHub forks](https://img.shields.io/github/forks/alexandreelise/plg_system_jxj?style=flat) ![GitHub watchers](https://img.shields.io/github/watchers/alexandreelise/plg_system_jxj?style=flat)
 
-```
-
-j3x -> j4x
-j3x <- j4x
-j3x -> j3x
-j4x -> j4x
+Two latest release of 2 major version of each CMS supported (Drupal, Joomla, Typo3, WordPress) in alphabetical order
+At the moment (2025-03-25), that means: Drupal (11.x,10x) , Joomla (5.x,4.x), TYPO3 (13.x, 12.x), WordPress (6.x, 5.x)
 
 ```
 
-### EDIT: Friday, July 14th 2023
+Joomla 4.x <-> Joomla 4.x
+Joomla 4.x <-> Joomla 5.x
+Joomla 4.x <-> Drupal 11.x
+Joomla 4.x <-> Drupal 10.x
+Joomla 4.x <-> TYPO3 13.x
+Joomla 4.x <-> TYPO3 12.x
+Joomla 4.x <-> WordPress 6.x
+Joomla 4.x <-> WordPress 5.x
 
-As j3x is near EOL(End Of Life) as of August 2023. This plugin now focuses on j4x (Joomla 4.x) and j5x (Joomla 5.x)
+Joomla 5.x <-> Joomla 4.x
+Joomla 5.x <-> Joomla 5.x
+Joomla 5.x <-> Drupal 11.x
+Joomla 5.x <-> Drupal 10.x
+Joomla 5.x <-> TYPO3 13.x
+Joomla 5.x <-> TYPO3 12.x
+Joomla 5.x <-> WordPress 6.x
+Joomla 5.x <-> WordPress 5.x
 
 ```
 
-j4x -> j4x
-j4x -> j5x
-j5x -> j5x
-j5x -> j4x
-
-```
-
-I called it JxJ pronounced J "x" J because it's Joomla! multiplies Joomla!, Joomla! website communicating with another
-Joomla! website. That's it. Kinda like a CROSS JOIN for geeky database folks and girls.
+I called it JxC pronounced J "x" C because it's Joomla! multiplies other CMS, Joomla! website communicating with another
+CMS of the [Open Website Alliance](https://openwebsitealliance.org/). That's it. Kinda like a CROSS JOIN for geeky database folks and girls.
 
 ## WHY?
 
 My name is Alexandre J-S William ELISÉ, I am a French web developer and Joomla! specialist. The idea came from a demo I
 needed to make for Virtual Joomladay France on Friday, June 12th 2020. A friend of mine, Marc DECHÈVRE, told me that it
-would be great to make two Joomla! websites communicate together.
+would be great to make two Joomla! websites communicate together. I also wanted to contribute to the Joomla Web Services enhancement project but not as a student.
+[GSoC 2025](https://docs.joomla.org/GSoC_2025_Project_Ideas)
 
 ## WHAT?
 
@@ -61,7 +64,7 @@ It is a unified system plugin that should work on both Joomla! 4.x and Joomla! 5
 
 ## HOW?
 
-j3x -> j4x communication is using PHP streams to make an HTTP request to the j4x webservice endpoint providing the api
+j3x -> j4x communication is using PHP streams to make an HTTP request to the j4x Web Service endpoint providing the api
 token.
 For j4x -> j3x communication it is more tricky because there are no webservices by default in Joomla! 3. That's why I
 chose to use the com_api provided by Techjoomla for this purpose. If you would like to use another solution it is up to
@@ -101,7 +104,7 @@ webservices in Joomla! 4.
 
 ## CONTRIBUTORS
 
-- Anyone is more than welcome to contribute to plg_system_jxj to make it even better.
+- Anyone is more than welcome to contribute to plg_system_jxc to make it even better.
   Take care. And have a delightful day. Super Joomlers!
 
 --------------------------------------------
