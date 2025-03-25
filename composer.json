@@ -1,0 +1,45 @@
+{
+  "name": "alexapi/plg-system-jxj",
+  "description": "AlexApi - JxJ - System - Plugin",
+  "license": "AGPL-3.0-or-later",
+  "type": "project",
+  "authors": [
+    {
+      "name": "Mr Alexandre J-S William ELISÉ",
+      "email": "code@apiadept.com",
+      "homepage": "https://apiadept.com"
+    }
+  ],
+  "config": {
+    "platform": {
+      "php": "8.1.0"
+    },
+    "github-protocols": [
+      "https"
+    ],
+    "optimize-autoloader": true,
+    "allow-plugins": true,
+    "sort-packages": true
+  },
+  "prefer-stable": true,
+  "require": {
+    "php": "~8.0.0|~8.1.0",
+    "ext-json": "*",
+    "ext-simplexml": "*",
+    "ext-gd": "*"
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "./tests/"
+    }
+  },
+  "require-dev": {
+    "roave/security-advisories": "dev-latest",
+    "phpunit/phpunit": "^10",
+    "friendsofphp/php-cs-fixer": "@stable"
+  },
+  "scripts": {
+    "test": "YOUR_JOOMLA_DIRECTORY=$HOME/Volumes/CORE/j4x vendor/bin/phpunit",
+    "gen": "export current_timestamp=\"$(date +%Y%m%d_%H%M)\" && { mkdir -p ./build && cd ./src && [ ! -f \"../build/$(basename $(dirname $PWD))_${current_timestamp}.zip\" ] && zip -9 -r ../build/$(basename $(dirname $PWD))_${current_timestamp}.zip . && cd .. ; }"
+  }
+}
